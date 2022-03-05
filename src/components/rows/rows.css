@@ -1,0 +1,27 @@
+.rowContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  margin-bottom: 10px;
+}
+
+.rowContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.rowImage {
+  height: 200px;
+  object-fit: contain;
+}
+
+.rowImage1 {
+  height: 150px;
+}
+
+.rowImage:hover,
+.rowImage1:hover {
+  transition: 1s;
+  transform: scale(1.1);
+}

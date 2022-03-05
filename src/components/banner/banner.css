@@ -1,0 +1,59 @@
+.banner {
+  height: 450px;
+  object-fit: contain;
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.imgBanner {
+  width: 100%;
+  height: 100%;
+}
+
+.bannerImage {
+  width: 100%;
+  height: 450px;
+  max-height: 450px;
+}
+
+.description {
+  position: absolute;
+  top: 50%;
+  left: 1%;
+  width: 600px;
+  color: white;
+}
+
+.Btn {
+  padding: 0.5em 1em;
+  margin: 0.25em;
+  color: #fff !important;
+  background: rgba(0, 0, 0, 0.4);
+  border: none;
+  border-radius: 0.25em;
+  outline: none;
+}
+
+.Btn:hover {
+  color: #000 !important;
+  background: #fff;
+}
+
+.desc {
+  width: 400px;
+  overflow: hidden;
+  max-height: 8rem;
+  -webkit-box-orient: vertical;
+  display: block;
+  display: -webkit-box;
+  overflow: hidden !important;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 4;
+}
+
+@media only screen and (max-width: 600px) {
+  .desc {
+    width: 300px;
+    -webkit-line-clamp: 3;
+  }
+}
