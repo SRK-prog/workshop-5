@@ -1,0 +1,23 @@
+.navbarContainer {
+  position: sticky;
+  height: 60px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.849);
+}
+
+.navLogo {
+  height: 30px;
+  width: 30px;
+  flex: 3;
+}
+
+.navLinks {
+  flex: 6;
+}
+
+.userLogo {
+  flex: 3;
+  height: 30px;
+}
