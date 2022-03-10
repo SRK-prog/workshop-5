@@ -4,12 +4,11 @@ import "./banner.css";
 import { fetchPost } from "../../redux/actions";
 
 const Banner = ({ fetchPost, post }) => {
-  const Random = Math.floor(Math.random() * 500);
-  const URL = `/movie/${Random}?api_key=02684aad9559f0e07b9211530fb7f2c8`;
-
   useEffect(() => {
+    const Random = Math.floor(Math.random() * 500);
+    const URL = `/movie/${Random}?api_key=02684aad9559f0e07b9211530fb7f2c8`;
     fetchPost(URL);
-  });
+  }, [fetchPost]);
 
   return (
     <div className="banner">
@@ -23,6 +22,7 @@ const Banner = ({ fetchPost, post }) => {
         <button className="Btn">Play</button>
         <button className="Btn">My list</button>
       </div>
+      <span className="dark_bottom"></span>
     </div>
   );
 };

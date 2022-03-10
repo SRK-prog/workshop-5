@@ -8,6 +8,10 @@ import BASE_URL from "../../apis/baseUrl";
 // };
 
 export const fetchPost = (URL) => async (dispatch) => {
-  const { data } = await BASE_URL.get(URL);
-  dispatch({ type: FETCH_POST, payload: data });
+  try {
+    const { data } = await BASE_URL.get(URL);
+    dispatch({ type: FETCH_POST, payload: data });
+  } catch (err) {
+    console.log(err);
+  }
 };
