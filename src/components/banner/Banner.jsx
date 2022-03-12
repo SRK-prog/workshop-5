@@ -10,20 +10,24 @@ const Banner = ({ fetchPost, post }) => {
     fetchPost(URL);
   }, [fetchPost]);
 
+  const bannnerStyle = {
+    backgroundImage: `url(https://image.tmdb.org/t/p/original/${post?.backdrop_path})`,
+    backgroundSize: "cover",
+    backgroundPosition: "center center",
+  };
+
   return (
-    <div className="banner">
-      <img
-        className="bannerImage"
-        src={"https://image.tmdb.org/t/p/original/" + post.backdrop_path}
-        alt=""
-      />
-      <div className="description">
-        <div className="desc"> {post.overview}</div>
-        <button className="Btn">Play</button>
-        <button className="Btn">My list</button>
+    <section style={bannnerStyle} className="banner">
+      <div>
+        <div className="description">
+          <h1 className="header-title">{post?.title}</h1>
+          <button className="Btn">Play</button>
+          <button className="Btn">My list</button>
+          <div className="desc"> {post?.overview}</div>
+        </div>
+        <span className="dark_bottom"></span>
       </div>
-      <span className="dark_bottom"></span>
-    </div>
+    </section>
   );
 };
 
