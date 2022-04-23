@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from "react";
 import "./rows.css";
 import BASE_URL from "../../apis/baseUrl";
+import { useDispatch } from "react-redux";
+import { TRAILER_DATA } from "../../redux/types";
 
 const RowItems = ({ url, isLarge, title }) => {
   const [posts, setPosts] = useState([]);
+  const dispatch = useDispatch();
   const imageURL = "https://image.tmdb.org/t/p/original/";
 
   useEffect(() => {
@@ -16,11 +19,12 @@ const RowItems = ({ url, isLarge, title }) => {
 
   return (
     <>
-      <h2 style={{ margin: "0 0 10px 10px", color: "white" }}>{title}</h2>
+      <h2 className="card-title">{title}</h2>
       <div className="rowContainer">
         {posts.map((item) => (
           <div key={item.id}>
             <img
+              onClick={() => dispatch({ type: TRAILER_DATA, payload: item })}
               className={isLarge ? "rowImage" : "rowImage1"}
               src={
                 isLarge

@@ -5,6 +5,8 @@
   overflow-y: hidden;
   overflow-x: scroll;
   margin-bottom: 10px;
+  height: 220px;
+  align-items: center;
 }
 
 .rowContainer::-webkit-scrollbar {
@@ -13,15 +15,20 @@
 
 .rowImage {
   height: 200px;
-  object-fit: contain;
+  object-fit: cover;
 }
 
 .rowImage1 {
-  height: 150px;
+  height: 170px;
 }
 
 .rowImage:hover,
 .rowImage1:hover {
   transition: 1s;
   transform: scale(1.1);
+}
+
+.card-title {
+  margin: 0 0 10px 10px;
+  color: white;
 }

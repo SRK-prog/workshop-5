@@ -1,14 +1,16 @@
 .banner {
-  height: 450px;
+  height: 550px;
   object-fit: contain;
   width: 100%;
   margin-bottom: 1rem;
   position: relative;
+  background-size: cover !important;
+  background-position: center center;
 }
 
 .description {
   margin-left: 30px;
-  padding-top: 140px;
+  padding-top: 240px;
   height: 190px;
   color: white;
 }

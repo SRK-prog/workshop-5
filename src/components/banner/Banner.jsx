@@ -11,9 +11,7 @@ const Banner = ({ fetchPost, post }) => {
   }, [fetchPost]);
 
   const bannnerStyle = {
-    backgroundImage: `url(https://image.tmdb.org/t/p/original/${post?.backdrop_path})`,
-    backgroundSize: "cover",
-    backgroundPosition: "center center",
+    background: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url(https://image.tmdb.org/t/p/original/${post?.backdrop_path})`,
   };
 
   return (

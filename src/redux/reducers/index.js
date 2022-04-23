@@ -1,8 +1,8 @@
 import { combineReducers } from "redux";
-// import postsReducers from "./postsReducers";
+import trailerReducer from "./trailerReducer";
 import postReducers from "./postReducers";
 
 export default combineReducers({
-  // posts: postsReducers,
+  trailer: trailerReducer,
   post: postReducers,
 });
