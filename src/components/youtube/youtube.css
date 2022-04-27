@@ -68,6 +68,8 @@
 .error-desc {
   font-size: 18px;
   margin-top: 10px;
+  padding-inline: 25px;
+  text-align: center;
 }
 
 @media (max-width: 650px) {
